@@ -1,0 +1,49 @@
+server:
+  port: 9091
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9092/eureka/
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+      - id: email-service
+        uri: lb://email-service
+        predicates:
+        - Path=/email/**
+        filters:
+        - RewritePath=/email/(?<path>.*), /$\{path}
+      - id: properties-service
+        uri: lb://properties-service
+        predicates:
+        - Path=/properties/**
+        filters:
+        - RewritePath=/properties/(?<path>.*), /$\{path}
+      - id: gcm-service
+        uri: lb://gcm-service
+        predicates:
+        - Path=/gcm/**
+        filters:
+        - RewritePath=/gcm/(?<path>.*), /$\{path}
+      - id: telegram-service
+        uri: lb://telegram-service
+        predicates:
+        - Path=/telegram/**
+        filters:
+        - RewritePath=/telegram/(?<path>.*), /$\{path}
+      - id: report-service
+        uri: lb://report-service
+        predicates:
+        - Path=/report/**
+        filters:
+        - RewritePath=/report/(?<path>.*), /$\{path}
