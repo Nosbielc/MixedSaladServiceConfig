@@ -14,14 +14,14 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 security:
-    oauth2:
-      client:
-          access-token-validity-seconds: 1800
-          authorized-grant-types: password,refresh_token
-          client-id: coderef
-          client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
-          resource-ids: resources
-          scope: read,write
+  oauth2:
+    client:
+      access-token-validity-seconds: 1800
+      authorized-grant-types: password,refresh_token
+      client-id: coderef
+      client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
+      resource-ids: resources
+      scope: read,write
 
 spring:
   datasource:
@@ -44,9 +44,6 @@ spring:
         type: trace
         jdbc:
           time_zone: UTC-3
-  ###
-  #   H2 Settings
-  ###
   h2:
     console:
       enabled: true
@@ -54,22 +51,5 @@ spring:
       settings:
         trace: false
         web-allow-others: true
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: "*"
-      jmx:
-        exposure:
-          include: "*"
-   endpoint:
-     health:
-       show-details: always
-     shutdown:
-        enabled: false
-      metrics: true
-    health:
-      mongo:
-        enabled: false
 logging:
   file: auth-service.log
