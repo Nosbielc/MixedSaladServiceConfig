@@ -17,9 +17,9 @@ spring:
         locator:
           enabled: false
       routes:
-      - id: oauth-service
-        uri: lb://oauth-service
+      - id: auth-service
+        uri: lb://auth-service
         predicates:
-        - Path=/oauth/**
+        - Path=/auth/**
         filters:
-        - RewritePath=/oauth/(?<path>.*), /$\{path}
+        - RewritePath=/auth/(?<path>.*), /$\{path}
