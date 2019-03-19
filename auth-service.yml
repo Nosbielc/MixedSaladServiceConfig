@@ -71,5 +71,5 @@ spring:
     health:
       mongo:
         enabled: false
-  logging:
-    file: auth-service.log
+logging:
+  file: auth-service.log
