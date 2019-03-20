@@ -22,6 +22,10 @@ security:
       client-secret: $2a$10$p9Paskd33kggkadgadknqeqe9999qdq2dk0fQNAQSesI4vuvKA0OZanDD2
       resource-ids: resources
       scope: read,write
+      accessTokenUri: http://localhost:9093/auth/oauth/token
+      userAuthorizationUri: http://localhost:9093/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:9093/auth/user/me
 
 spring:
   datasource:
