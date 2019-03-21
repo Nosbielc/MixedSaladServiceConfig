@@ -31,7 +31,7 @@ eureka:
 auth:
   redirectionUrl: http://localhost:9093/auth
   emailFrom: noreply@example.com
-  corsAllowedOrigins: *
+  corsAllowedOrigins: "*"
 management:
   endpoints:
     web:
