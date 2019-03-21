@@ -37,8 +37,8 @@ management:
     web:
       base-path: /
 spring: 
-  jackson: America/Sao_Paulo
-    time_zone:
+  jackson: 
+    time-zone: America/Sao_Paulo
   datasource:
     hikari:
       maximum-pool-size: 25
