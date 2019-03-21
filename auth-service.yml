@@ -13,21 +13,32 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-security:
-  oauth2:
-    client:
-      access-token-validity-seconds: 1800
-      authorized-grant-types: password,refresh_token
-      client-id: mixedSalad
-      client-secret: $2a$10$p9Paskd33kggkadgadknqeqe9999qdq2dk0fQNAQSesI4vuvKA0OZanDD2
-      resource-ids: resources
-      scope: read,write
+#security:
+#  oauth2:
+#    client:
+#      access-token-validity-seconds: 1800
+#      authorized-grant-types: password,refresh_token
+#      client-id: mixedSalad
+#      client-secret: $2a$10$p9Paskd33kggkadgadknqeqe9999qdq2dk0fQNAQSesI4vuvKA0OZanDD2
+#      resource-ids: resources
+#      scope: read,write
     #   accessTokenUri: http://localhost:9093/auth/oauth/token
     #   userAuthorizationUri: http://localhost:9093/auth/oauth/authorize
     # resource:
     #   userInfoUri: http://localhost:9093/auth/user/me
-
-spring:
+  
+# Injected properties
+auth:
+  redirectionUrl: http://localhost:9093/auth
+  emailFrom: noreply@example.com
+  corsAllowedOrigins: *
+management:
+  endpoints:
+    web:
+      base-path: /
+spring: 
+  jackson: America/Sao_Paulo
+    time_zone:
   datasource:
     hikari:
       maximum-pool-size: 25
@@ -47,7 +58,7 @@ spring:
         format_sql: false
         type: trace
         jdbc:
-          time_zone: UTC-3
+          time_zone: America/Sao_Paulo
   h2:
     console:
       enabled: true
