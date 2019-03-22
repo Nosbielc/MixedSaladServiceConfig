@@ -12,7 +12,7 @@ eureka:
     #   user.password: "password" #can access the protected client endpoints
   client:
     serviceUrl:
-      defaultZone: ttp://localhost:9091/eureka/
+      defaultZone: http://localhost:9091/eureka/
 
 spring:
   application:
