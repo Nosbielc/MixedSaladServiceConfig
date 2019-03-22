@@ -13,15 +13,15 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-#security:
-#  oauth2:
-#    client:
-#      access-token-validity-seconds: 1800
-#      authorized-grant-types: password,refresh_token
-#      client-id: mixedSalad
-#      client-secret: $2a$10$p9Paskd33kggkadgadknqeqe9999qdq2dk0fQNAQSesI4vuvKA0OZanDD2
-#      resource-ids: resources
-#      scope: read,write
+security:
+ oauth2:
+   client:
+     access-token-validity-seconds: 1800
+     authorized-grant-types: password,refresh_token
+     client-id: mixedSalad
+     client-secret: $2a$10$p9Paskd33kggkadgadknqeqe9999qdq2dk0fQNAQSesI4vuvKA0OZanDD2
+     resource-ids: resources
+     scope: read,write
     #   accessTokenUri: http://localhost:9093/auth/oauth/token
     #   userAuthorizationUri: http://localhost:9093/auth/oauth/authorize
     # resource:
