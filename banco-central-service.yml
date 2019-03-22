@@ -25,7 +25,7 @@ spring:
     boot:
       admin:
         client:
-          url: http://localhost:9094/
+          url: http://localhost:9094/admin
           username: "user"
           password: "password" 
   datasource:
