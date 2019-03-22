@@ -25,6 +25,12 @@ spring:
         locator:
           enabled: false
       routes:
+      - id: admin-service
+        uri: lb://admin-service
+        predicates:
+        - Path=/admin/**
+        filters:
+        - RewritePath=/admin/(?<path>.*), /$\{path}
       - id: auth-service
         uri: lb://auth-service
         predicates:
