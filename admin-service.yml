@@ -5,12 +5,15 @@ eureka:
   instance:
     hostname: localhost
     port: 9091
-    # metadata-map:
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
     #   user.name: "user"         #These two are needed so that the server
     #   user.password: "password" #can access the protected client endpoints
   client:
     registerWithEureka: true
     fetchRegistry: false
+    registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
   server:
