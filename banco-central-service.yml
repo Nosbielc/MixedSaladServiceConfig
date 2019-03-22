@@ -26,8 +26,8 @@ spring:
       admin:
         client:
           url: http://localhost:9094/admin
-          username: "user"
-          password: "password" 
+          # username: "user"
+          # password: "password" 
   datasource:
     hikari:
       maximum-pool-size: 25
