@@ -1,3 +1,4 @@
-configsRange:
-  max: 10
-  min: 1
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+  file: config-service.log
