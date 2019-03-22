@@ -25,7 +25,7 @@ spring:
       - secure
   boot:
     admin:
-      context-path: /admin
+      context-path: /
       ui:
         title: Mixed Salad Admin
   security:
