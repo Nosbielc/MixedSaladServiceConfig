@@ -25,21 +25,21 @@ spring:
         locator:
           enabled: false
       routes:
-      - id: admin-service
-        uri: lb://admin-service
-        predicates:
-        - Path=/admin/**
-        filters:
-        - RewritePath=/admin/(?<path>.*), /$\{path}
-      - id: auth-service
-        uri: lb://auth-service
-        predicates:
-        - Path=/oauth/**
-        filters:
-        - RewritePath=/oauth/(?<path>.*), /$\{path}
-      - id: banco-central-service
-        uri: lb://banco-central-service
-        predicates:
-        - Path=/bc/**
-        filters:
-        - RewritePath=/bc/(?<path>.*), /$\{path}
+        - id: admin-service
+          uri: lb://admin-service
+          predicates:
+            - Path=/admin/**
+          filters:
+            - RewritePath=/admin/(?<path>.*), /$\{path}
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/oauth/**
+          filters:
+            - RewritePath=/oauth/(?<path>.*), /$\{path}
+        - id: banco-central-service
+          uri: lb://banco-central-service
+          predicates:
+            - Path=/bc/**
+          filters:
+            - RewritePath=/bc/(?<path>.*), /$\{path}
