@@ -11,13 +11,8 @@ eureka:
     #   user.name: "user"         #These two are needed so that the server
     #   user.password: "password" #can access the protected client endpoints
   client:
-    registerWithEureka: true
-    fetchRegistry: false
-    registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
+      defaultZone: ttp://localhost:9091/eureka/
 
 spring:
   application:
