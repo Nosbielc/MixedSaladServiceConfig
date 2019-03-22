@@ -19,7 +19,6 @@ logging:
   file: banco-central-service.log
 
 spring:
-  security:
   application:
     name: banco-central-service
   cloud:
