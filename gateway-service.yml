@@ -40,6 +40,6 @@ spring:
         - id: banco-central-service
           uri: lb://banco-central-service
           predicates:
-            - Path=/bc/**
+            - Path=/**
           filters:
-            - RewritePath=/bc/(?<path>.*), /$\{path}
+            - RewritePath=/**/(?<path>.*), /$\{path}
