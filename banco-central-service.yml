@@ -68,3 +68,9 @@ management:
   health:
     mongo:
       enabled: false
+authserver:
+  hostname: http://localhost:9092/oauth
+security:
+  oauth2:
+    resource:
+      userInfoUri: ${authserver.hostname}/user

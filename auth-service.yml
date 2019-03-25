@@ -29,7 +29,16 @@ management:
   endpoints:
     web:
       base-path: /
-spring: 
+spring:
+  application:
+    name: auth-service
+  cloud:
+    boot:
+      admin:
+        client:
+          url: http://localhost:9094/admin
+          # username: "user"
+          # password: "password" 
   jackson: 
     time-zone: America/Sao_Paulo
   datasource:
