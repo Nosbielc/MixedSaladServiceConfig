@@ -11,6 +11,24 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
   file: gateway-service.log
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: false
+    metrics: true
+  health:
+    mongo:
+      enabled: false
+
 spring:
   cloud:
     gateway:

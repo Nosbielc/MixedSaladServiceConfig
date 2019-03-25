@@ -64,10 +64,17 @@ management:
       show-details: always
     shutdown:
       enabled: false
-    metrics: true
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
   health:
     mongo:
       enabled: false
+  metrics:
+    export:
+      prometheus:
+        enabled: true
 authserver:
   hostname: http://localhost:9092/oauth
 security:
