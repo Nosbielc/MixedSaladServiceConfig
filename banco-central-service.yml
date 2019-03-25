@@ -52,6 +52,8 @@ spring:
         trace: false
         web-allow-others: true
 management:
+  security:
+    enabled: false
   endpoints:
     web:
       exposure:
