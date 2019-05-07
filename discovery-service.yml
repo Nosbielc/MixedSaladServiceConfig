@@ -17,12 +17,14 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
-  boot:
-    admin:
-      client:
-        url: http://localhost:9094/admin
-        username: "user"
-        password: "password"
+spring:
+  cloud:    
+    boot:
+      admin:
+        client:
+          url: http://localhost:9094/admin
+          username: "user"
+          password: "password"
   zipkin:
     base-url: http://localhost:9095/
 

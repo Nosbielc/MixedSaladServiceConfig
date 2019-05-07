@@ -61,4 +61,4 @@ spring:
           username: "user"
           password: "password"
   zipkin:
-    base-url: http://localhost:9095/ 
+    base-url: http://localhost:9095/
