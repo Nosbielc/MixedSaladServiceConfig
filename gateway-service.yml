@@ -54,3 +54,9 @@ spring:
             - Path=/bc/**
           filters:
             - RewritePath=/bc/(?<path>.*), /$\{path}
+    boot:
+      admin:
+        client:
+          url: http://localhost:9094/admin
+          username: "user"
+          password: "password" 
