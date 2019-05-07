@@ -32,6 +32,8 @@ management:
 spring:
   application:
     name: auth-service
+  zipkin:
+    base-url: http://localhost:9095/ 
   cloud:
     boot:
       admin:
