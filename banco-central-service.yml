@@ -59,10 +59,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: "health,info"
     jmx:
       exposure:
-        include: *
+        include: "*"
   endpoint:
     health:
       show-details: always
