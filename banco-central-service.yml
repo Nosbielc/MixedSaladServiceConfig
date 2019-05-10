@@ -72,6 +72,8 @@ management:
       enabled: true
     prometheus:
       enabled: true
+    jmx:
+      enabled: true
   health:
     mongo:
       enabled: false
