@@ -24,7 +24,12 @@ management:
       show-details: always
     shutdown:
       enabled: false
-    metrics: true
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    jmx:
+      enabled: true
   health:
     mongo:
       enabled: false
@@ -34,7 +39,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: false
+          enabled: true
       routes:
         - id: admin-service
           uri: lb://admin-service
