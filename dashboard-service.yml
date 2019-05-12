@@ -20,4 +20,4 @@ spring:
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
-  file: dashboard-service.log
+  file: logs/dashboard-service.log
