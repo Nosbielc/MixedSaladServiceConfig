@@ -26,7 +26,7 @@ spring:
   datasource:
     hikari:
       maximum-pool-size: 25
-    url: jdbc:h2:file:./bancocentral-app;DB_CLOSE_ON_EXIT=TRUE
+    url: jdbc:h2:file:./dbs/bancocentral-app;DB_CLOSE_ON_EXIT=TRUE
     platform: h2
     username: bancocentral
     password: bancocentral
