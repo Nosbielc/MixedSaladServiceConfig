@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9091/eureka/
+      defaultZone: http://discovery-service:9091/eureka/
 
 security:
  oauth2:
@@ -22,7 +22,7 @@ security:
   
 # Injected properties
 auth:
-  redirectionUrl: http://localhost:9093/auth
+  redirectionUrl: http://auth-service:9093/auth
   emailFrom: noreply@example.com
   corsAllowedOrigins: "*"
 management:
@@ -32,13 +32,15 @@ management:
 spring:
   application:
     name: auth-service
+  profiles:
+    active: prod
   zipkin:
-    base-url: http://localhost:9095/
+    base-url: http://zipkin-service:9095/
   cloud:
     boot:
       admin:
         client:
-          url: http://localhost:9094/admin
+          url: http://admin-service:9094/admin
           username: "user"
           password: "password" 
   jackson: 
