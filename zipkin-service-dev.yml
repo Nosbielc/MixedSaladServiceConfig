@@ -10,6 +10,9 @@ eureka:
         url: http://localhost:9094/admin
         username: "user"
         password: "password"
+spring:
+  profiles:
+    active: dev
 
 logging:
   pattern:
