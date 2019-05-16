@@ -9,10 +9,11 @@ eureka:
       defaultZone: http://discovery-service:9091/eureka/
 
 spring:
-  profiles:
-    active: prod
   application:
     name: config-service
+  profiles:
+    active: prod
+  cloud:
     boot:
       admin:
         client:
