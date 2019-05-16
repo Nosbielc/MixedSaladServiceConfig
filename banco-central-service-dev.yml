@@ -16,6 +16,8 @@ spring:
     name: banco-central-service
   zipkin:
     base-url: http://localhost:9095/
+  profiles:
+    active: dev
   cloud:
     boot:
       admin:
