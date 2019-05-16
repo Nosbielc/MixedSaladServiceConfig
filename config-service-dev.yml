@@ -11,6 +11,8 @@ eureka:
 spring:
   application:
     name: config-service
+  profiles:
+    active: dev
   cloud:
     boot:
       admin:
