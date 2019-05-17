@@ -8,6 +8,7 @@ server:
 
 eureka:
   datacenter: MixedSalad
+  environmenr: Desenvolvimento
   instance:
     hostname: localhost
   client:

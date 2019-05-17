@@ -8,6 +8,7 @@ server:
 
 eureka:
   datacenter: MixedSalad
+  environmenr: Produção
   instance:
     hostname: discovery-service
   client:
