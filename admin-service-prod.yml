@@ -21,7 +21,6 @@ spring:
   profiles:
     active:
       - secure
-      - prod
   boot:
     admin:
       context-path: /admin
