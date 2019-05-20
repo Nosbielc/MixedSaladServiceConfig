@@ -26,6 +26,13 @@ spring:
       context-path: /admin
       ui:
         title: Mixed Salad Admin
+      notify:
+        telegram:
+          enabled: true
+          auth-token: 798219666:AAHjjOXnUdV1yNsw_HNUfUlN4hu2A9AoxAo
+          chat-id: g314775785
+          parse-mode: 'HTML'
+          message: "<strong>#{instance.registration.name}</strong>/#{instance.id} is <strong>#{event.statusInfo.status}</strong>"
   security:
     user:
       name: "user"
