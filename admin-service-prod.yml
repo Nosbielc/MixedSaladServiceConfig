@@ -30,7 +30,7 @@ spring:
         telegram:
           enabled: true
           auth-token: 798219666:AAHjjOXnUdV1yNsw_HNUfUlN4hu2A9AoxAo
-          chat-id: g314775785
+          chat-id: -377205524
           parse-mode: 'HTML'
           message: "<strong>#{instance.registration.name}</strong>/#{instance.id} is <strong>#{event.statusInfo.status}</strong>"
   security:
