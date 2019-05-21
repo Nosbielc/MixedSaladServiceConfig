@@ -29,6 +29,25 @@ management:
   endpoints:
     web:
       base-path: /
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: false
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    jmx:
+      enabled: true
+  health:
+    mongo:
+      enabled: false
 spring:
   application:
     name: auth-service
