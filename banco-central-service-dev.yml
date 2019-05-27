@@ -14,7 +14,7 @@ logging:
 banco:
   central:
     circuitBreaker:
-      enabled: false
+      enabled: true
 
 spring:
   application:
