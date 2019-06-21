@@ -3,16 +3,10 @@ server:
 
 eureka:
   instance:
-    hostname: ${spring.application.name}
-    preferIpAddress: true
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    statusPageUrlPath: ${server.servlet.context-path}/actuator/info
-    healthCheckUrlPath: ${server.servlet.context-path}/actuator/health
-    leaseRenewalIntervalInSeconds: 15
-    leaseExpirationDurationInSeconds: 45
+    hostname: localhost
     port: 9091
+    health-check-url-path: /actuator/health
     metadata-map:
-      server.servlet.context-path: ${server.servlet.context-path}
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
       user:
         name: "user"         #These two are needed so that the server
