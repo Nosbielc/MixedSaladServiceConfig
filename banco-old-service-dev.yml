@@ -96,9 +96,9 @@ management:
         # The index to store metrics in, defaults to "metrics"
         index: metrics
         host: http://localhost:9200
-authserver:
-  hostname: http://localhost:9092/oauth
-security:
-  oauth2:
-    resource:
-      userInfoUri: ${authserver.hostname}/user
+#authserver:
+#  hostname: http://localhost:9092/oauth
+#security:
+#  oauth2:
+#    resource:
+#      userInfoUri: ${authserver.hostname}/user
