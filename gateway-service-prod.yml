@@ -61,6 +61,12 @@ spring:
             - Path=/bc/**
           filters:
             - RewritePath=/bc/(?<path>.*), /$\{path}
+        - id: banco-central-service
+          uri: lb://banco-old-service
+          predicates:
+            - Path=/bo/**
+          filters:
+            - RewritePath=/bo/(?<path>.*), /$\{path}
     boot:
       admin:
         client:
