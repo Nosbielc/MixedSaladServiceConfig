@@ -60,6 +60,13 @@ spring:
       settings:
         trace: false
         web-allow-others: true
+  ###
+  #   ECache Settings
+  ###
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+      
 management:
   security:
     enabled: false
